@@ -23,7 +23,71 @@
     align-items: center; /* Выравниваем элементы по вертикали */
     gap: 10px; /* Добавляем расстояние между картинкой и текстом */
 }
+ 
 
+.unique-container {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 50vh; /* Занимает всю высоту экрана */
+}
+.unique-image-wrapper {
+    text-align: center; /* Центрирует изображение внутри блока */
+}
+ 
+.unique-content {
+    margin-left: 20px;
+    max-width: 50%;
+}
+.unique-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+
+
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.image-list li {
+    flex: 1 1 calc(25% - 20px); /* Каждому элементу 25% ширины */
+    max-width: calc(25% - 20px);
+    text-align: center;
+}
+
+.image-list img {
+    max-width: 100%;
+   
+}
+
+.image-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .image-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 элемента в строке на меньших экранах */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-list li {
+        flex: 1 1 100%; /* 1 элемент в строке на очень узких экранах */
+        max-width: 100%;
+    }
+}
 .logoContainer img {
     max-width: 400px; /* Ограничиваем ширину картинки, чтобы она не была слишком большой */
     height: auto; /* Сохраняем пропорции */
