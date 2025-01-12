@@ -45,8 +45,75 @@
 }
 
 
+/* Контейнер по умолчанию */
+.contact-container {
+    background-color: #b41111; /* Синий фон */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+   
+    position: absolute; /* Абсолютное позиционирование */
+    right: 20px; /* Отступ от правого края */
+    top: 20px; /* Отступ от верхнего края */
+    z-index: 10; /* Поверх других элементов */
+}
+
+/* На маленьких экранах */
+@media (max-width: 995px) {
+    .contact-container {
+        position: static; /* Возвращаем в поток */
+        margin-top: 20px;
+        background-color: #b41111; /* Убедимся, что фон остается */
+        display: flex;
+        justify-content: left; /* Центрируем содержимое по горизонтали */
+        width: 100%; /* Заполняем доступное пространство */
+        align-items: center; /* Центрируем содержимое по вертикали */
+    }
+
+    .contact-container .d-flex {
+        flex-shrink: 0; /* Останавливаем сжатие иконки */
+    }
+
+    .contact-container .ms-3 {
+        text-align: center; /* Центрируем текст */
+    }
+}
 
 
+.logo {
+    max-width: 450px;
+}
+
+.navbar-nav {
+    display: flex; /* Сделать элементы меню в строку */
+    flex-direction: row; /* Горизонтальная ориентация */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Центрировать элементы */
+    gap: 20px; /* Пробел между пунктами меню */
+}
+
+.navbar-nav .nav-item {
+    list-style: none; /* Убираем точки у списка */
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff0000; /* Цвет при наведении */
+}
+
+/* Всегда показывать меню */
+.navbar-collapse {
+    display: block !important; /* Всегда отображать меню */
+    text-align: center; /* Центрируем содержимое */
+}
 
 .image-list {
     display: flex;
