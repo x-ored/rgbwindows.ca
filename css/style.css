@@ -81,7 +81,10 @@
 
 
 .logo {
-    max-width: 450px;
+    width: 100%; /* Make the logo take up the full width of the container */
+    height: auto; /* Maintain the aspect ratio of the logo */
+    max-width: 450px; /* Set the maximum width */
+    max-height: 100px; /* Optional: Set a maximum height if needed */
 }
 
 .navbar-nav {
